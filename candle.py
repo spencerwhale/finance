@@ -5,7 +5,7 @@ import pandas as pd
 from bokeh.plotting import figure, show, output_file
 # from bokeh.sampledata.stocks import MSFT
 
-df = pd.DataFrame(pd.read_csv('HistoricalPrices.csv',skipinitialspace=True))
+df = pd.read_csv('HistoricalPrices.csv',skipinitialspace=True)
 df["Date"] = pd.to_datetime(df["Date"])
 
 inc = df.Close > df.Open
